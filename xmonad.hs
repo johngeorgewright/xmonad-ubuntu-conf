@@ -23,7 +23,6 @@ import XMonad.Layout.ThreeColumns
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Circle
 import XMonad.Layout.PerWorkspace (onWorkspace)
-import XMonad.Layout.Fullscreen
 import XMonad.Util.EZConfig
 import XMonad.Util.Run
 import XMonad.Hooks.DynamicLog
@@ -340,7 +339,6 @@ main = do
   , layoutHook = myLayouts
   , workspaces = myWorkspaces
   , modMask = myModMask
-  , handleEventHook = fullscreenEventHook
   , startupHook = do
       setWMName "LG3D"
       windows $ W.greedyView startupWorkspace
